@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-commerse</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    * { 
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: sans-serif; 
+    background-color: powderblue; 
+}
+
+header { 
+    margin: 20px auto; 
+    padding: 0 30px; 
+    max-width: 1360px; 
+    width: 100%; 
+    height: 75px; 
+    background-image: linear-gradient(to right, #383569, #4a478a); 
+    color: white; 
+    border-radius: 30px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+header .logo { 
+    font-size: 30px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+}
+
+.nav-container { 
+    display: flex; 
+    align-items: center; 
+    gap: 30px; 
+}
+
+.nav-links { 
+    display: flex; 
+    list-style: none; 
+    align-items: center; 
+}
+
+.nav-links li a { 
+    text-transform: uppercase; 
+    font-size: 15px; 
+    font-weight: bold; 
+    padding: 10px 15px; 
+    color: white; 
+    text-decoration: none; 
+    transition: color 250ms ease-in, background-color 250ms ease-in; 
+}
+
+.nav-links li a:hover { 
+    color: orangered; 
+}
+
+.nav-buttons { 
+    display: flex; 
+    gap: 10px; 
+}
+
+button { 
+    padding: 10px 30px; 
+    color: white; 
+    background-color: blue; 
+    border: 1px solid silver; 
+    border-radius: 20px; 
+    text-transform: uppercase; 
+    font-weight: 900; 
+    cursor: pointer; 
+    transition: color 250ms ease-in, background-color 250ms ease-in, transform 250ms ease-in; 
+}
+
+.btn:hover { 
+    color: black; 
+    background-color: gold; 
+}
+
+.rgt:hover { 
+    color: white; 
+    background-color: green; 
+}
+
+.input-box {
+    max-width: 1360px;
+    margin: 10px auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.search-box, .date-box { 
+    height: 35px; 
+    border: 1px solid purple;  
+    text-align: left; 
+    color: black; 
+    padding: 0 10px;
+}
+
+.search-box { 
+    width: 250px; 
+    border-radius: 22px;
+}
+
+.date-box { 
+    width: 130px; 
+    border-radius: 12px;
+    transition: 3s ease-in;
+}
+
+.date-box:hover{
+  background-color: aqua;
+}
+
+section { 
+    background-color: transparent; 
+    margin: 20px auto; 
+    max-width: 1360px;
+    padding: 0 30px;
+}
+
+.wrapper { 
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card1, .card2, .card3, .card4 { 
+    min-height: 100px; 
+    border-radius: 12px; 
+    background-color: #4a478a; 
+    width: 180px; 
+    padding: 15px; 
+    text-transform: uppercase; 
+    font-size: 11px; 
+    color: orange; 
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.5s ease-in, transform 0.5s ease-in;
+}
+
+.card1:hover{
+  background-color: green;
+  color: white;
+  transform: rotate(360deg);
+}
+
+.card2:hover{
+  background-color: green;
+  color: white;
+  transform: rotate(360deg);
+}
+
+.card3:hover{
+  background-color: green;
+  color: white;
+  transform: rotate(360deg);
+}
+
+.card4:hover{
+  background-color: green;
+  color: white;
+  transform: rotate(360deg);
+}
+
+p { 
+    text-transform: uppercase; 
+    font-size: 20px; 
+    font-weight: 600; 
+    color: white; 
+    text-align: center; 
+}
+
+.myp1{
+  color: #4a478a;
+  margin-left: -5%;
+}
+
+.myp1 span{
+  color: orangered;
+}
+
+section ul{
+  display: flex;
+  padding: 10px;
+  gap: 73%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+section li{
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 800;
+  color: #383569;
+  margin-top: 20px;
+}
+
+.b1{
+  background-color: transparent;
+  color: #383569;
+}
+
+.b1:hover{
+  background-color: #383569;
+  color: white;
+  width: 150px;
+}
+
+table{
+  width: 100%;
+  max-width: 1290px;
+  height: 500px;
+  border: 3px solid silver;
+  border-radius: 28px;
+  text-align: center;
+  background-image: linear-gradient(#033);
+  color:white;
+  text-transform: uppercase;
+  overflow-x: auto;
+  display: block;
+}
+
+th,td{
+  border: 2px solid silver;
+  border-radius: 12px;
+}
+
+th{
+  background-color: darkblue;
+  height: 60px;
+}
+
+.tb{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td sup{
+  color: orangered;
+}
+
+.b2{
+  width: 300px;
+  height: 70px;
+  border-radius: 24px;
+  color: white;
+  background-color:green;
+  text-transform: uppercase;
+  font-size: 20px;
+  transition: 2s ease;
+  margin: 10px auto;
+  display: block;
+}
+
+.b2:hover{
+color: purple;
+background-color: transparent;
+border:2px solid black;
+}
+
+.house{
+  background-color: #4a478a;
+  color: white;
+  margin: 10px auto;
+  padding: 20px;
+  height: auto;
+  border-radius: 30px;
+  max-width: 1360px;
+}
+
+.last{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 1.0px;
+  color: black;
+  margin: 10px;
+}
+
+.last span{
+  color: orangered;
+}
+
+.p1{
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  text-align: left;
+}
+
+.p1 i{
+  color: darkgoldenrod;
+}
+
+.in{
+  width: 420px;
+  height: 225px;
+  border: 1px solid slategray;
+  border-radius: 12px;
+  display:grid ;
+  margin: 20px auto;
+}
+
+.input-boxx{
+margin: 3px;
+width: 400px;
+height: 40px;
+border-radius: 12px;
+}
+
+.text{
+width: 400px;
+height: 90px;
+border-radius: 12px;
+}
+
+.b3{
+  width: 100px;
+  height: 35px;
+  text-transform: uppercase;
+  border-radius: 12px;
+  color: white;
+  background-color: #033;
+  margin: 10px auto;
+  display: block;
+}
+
+@media (max-width: 1200px) {
+    header {
+        height: 70px;
+        padding: 0 20px;
+        border-radius: 20px;
+    }
+    .nav-links li a {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+    .card1, .card2, .card3, .card4 {
+        width: 160px;
+    }
+    table {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+    .nav-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .nav-links {
+        gap: 10px;
+    }
+    .input-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .search-box {
+        width: 100%;
+    }
+    .date-box {
+        width: 100%;
+    }
+    .myp1 {
+        margin-left: 0;
+        text-align: center;
+        order: -1;
+    }
+    .wrapper {
+        gap: 15px;
+    }
+    .card1, .card2, .card3, .card4 {
+        width: 45%;
+        min-width: 140px;
+    }
+    section ul {
+        gap: 20px;
+        flex-direction: column;
+    }
+    table {
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    header .logo {
+        font-size: 24px;
+    }
+    .nav-links li a {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    button {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    .card1, .card2, .card3, .card4 {
+        width: 100%;
+        max-width: 280px;
+    }
+    .in {
+        width: 100%;
+        height: auto;
+    }
+    .input-boxx, .text {
+        width: 100%;
+    }
+    .b2 {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        margin: 10px auto;
+        padding: 0 15px;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .nav-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    button {
+        width: 100%;
+    }
+    .wrapper {
+        gap: 12px;
+    }
+    section {
+        padding: 0 15px;
+    }
+    .last {
+        font-size: 24px;
+    }
+    .p1 {
+        font-size: 14px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">E-commerce</div>
+        <nav class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#">products</a></li>
+                <li><a href="#">shipping</a></li>
+                <li><a href="#">prices</a></li>
+                <li><a href="#">contacts</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn" type="button">login</button>
+                <button class="rgt" type="button">register</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="input-box">
+        <input type="search" class="search-box" placeholder="search....">
+        <p class="myp1">welcome to only trusted <span> e-commerce </span> website</p>
+        <input type="date" class="date-box">
+    </div>
+
+    <section>
+        <div class="wrapper">
+            <div class="card1">
+                total revenue 
+                <p>$245</p>
+            </div>
+            <div class="card2">
+                total orders 
+                <p>1,245</p>
+            </div>
+            <div class="card3">
+                new customers 
+                <p>3,245</p>
+            </div>
+            <div class="card4">
+                conversion rate 
+                <p>7,245</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <ul>
+            <li><a href="#">recent orders</a></li>
+            <button class="b1">view all</button>
+        </ul>
+        <table class="tb">
+            <tr>
+                <th>ORDER ID</th>
+                <th>CUSTOMER NAME</th>
+                <th>PRODUCT NAME</th>
+                <th>TOTAL AMOUNT</th>
+                <th>DEPOSIT</th>
+                <th>BALANCE</th>
+                <th>STATUS</th>
+                <th>DATE</th>
+                <th>COUNTRY</th>
+                <th>SHIPPING COST</th>
+            </tr>
+
+            <tr>
+                <td>#01-234</td>
+                <td>wilson chiyenda</td>
+                <td>car</td>
+                <td>k5,000,000.00</td>
+                <td>K2,000,000.00</td>
+                <td>K3,000,000.00</td>
+                <td>pending</td>
+                <td>10<sup>th</sup>,may 2025</td>
+                <td>malawi</td>
+                <td>K1,500,000.00</td>
+            </tr>
+
+            <tr>
+                <td>#02-234</td>
+                <td>Aisha banda</td>
+                <td>shoes</td>
+                <td>k50,000.00</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>completed</td>
+                <td>10<sup>th</sup>,may 2025</td>
+                <td>malawi</td>
+                <td>K10,000.00</td>
+            </tr>
+
+             <tr>
+                <td>#03-234</td>
+                <td>clement mbewe</td>
+                <td>motocycle</td>
+                <td>k3,000,000.00</td>
+                <td>K1,000,000.00</td>
+                <td>K2,000,000.00</td>
+                <td>pending</td>
+                <td>10<sup>th</sup>,may 2025</td>
+                <td>malawi</td>
+                <td>K700,000.00</td>
+            </tr>
+
+             <tr>
+                <td>#04-234</td>
+                <td>Dorothy chadzala</td>
+                <td>Iphone 17</td>
+                <td>k15,000,000.00</td>
+                <td>K13,000,000.00</td>
+                <td>K2,000,000.00</td>
+                <td>pending</td>
+                <td>10<sup>th</sup>,may 2025</td>
+                <td>malawi</td>
+                <td>K3,500,000.00</td>
+            </tr>
+
+             <tr>
+                <td>#05-234</td>
+                <td>wisdom mtawali</td>
+                <td>fridge</td>
+                <td>k2,500,000.00</td>
+                <td>K1,500,000.00</td>
+                <td>K1,000,000.00</td>
+                <td>pending</td>
+                <td>10<sup>th</sup>,may 2025</td>
+                <td>malawi</td>
+                <td>K600,000.00</td>
+            </tr>
+
+             <tr>
+                <td>#06-234</td>
+                <td>james anafi</td>
+                <td>bed</td>
+                <td>k3,000,000.00</td>
+                <td>K2,000,000.00</td>
+                <td>K1,000,000.00</td>
+                <td>pending</td>
+                <td>10<sup>th</sup>,may 2025</td>
+                <td>malawi</td>
+                <td>K700,000.00</td>
+            </tr>
+
+
+             <tr>
+                <td>#07-234</td>
+                <td>Oreen mkandawire</td>
+                <td>tecno pop 10</td>
+                <td>k800,000.00</td>
+                <td>K8000,000.00</td>
+                <td>N/A</td>
+                <td>completed</td>
+                <td>10<sup>th</sup>,may 2025</td>
+                <td>malawi</td>
+                <td>K250,000.00</td>
+            </tr>
+
+             <tr>
+                <td>#08-234</td>
+                <td>masha lowore</td>
+                <td>nails</td>
+                <td>k1,000,000.00</td>
+                <td>K750,000.00</td>
+                <td>K250,000.00</td>
+                <td>pending</td>
+                <td>10<sup>th</sup>,may 2025</td>
+                <td>malawi</td>
+                <td>K400,0000.00</td>
+            </tr>
+         <tr>
+                <td>#09-234</td>
+                <td>racheal singini</td>
+                <td>sienta</td>
+                <td>k5,000,000.00</td>
+                <td>K2,000,000.00</td>
+                <td>K3,000,000.00</td>
+                <td>pending</td>
+                <td>10<sup>th</sup>,may 2025</td>
+                <td>malawi</td>
+                <td>K1,500,000.00</td>
+            </tr>
+
+         <tr>
+                <td>#10-234</td>
+                <td>richard moyo</td>
+                <td>car</td>
+                <td>k7,000,000.00</td>
+                <td>K5,000,000.00</td>
+                <td>K2,000,000.00</td>
+                <td>pending</td>
+                <td>10<sup>th</sup>,may 2025</td>
+                <td>malawi</td>
+                <td>K1,500,000.00</td>
+            </tr>
+
+             <tr>
+                <td>#11-234</td>
+                <td>takondwa mtema</td>
+                <td>car</td>
+                <td>k11,000,000.00</td>
+                <td>K11,000,000.00</td>
+                <td>N/A</td>
+                <td>completed</td>
+                <td>10<sup>th</sup>,may 2025</td>
+                <td>malawi</td>
+                <td>K1,500,000.00</td>
+            </tr>
+             </table>
+    </section>
+
+    <section>
+        <button class="b2">buy now</button>
+    </section>
+
+    <section class="house">
+        <div class="last">welcome <span>everything</span> you is available!! </div>
+        <p class="p1">
+            whatever you want here on our trusted website is available
+            and transactions of all networks is done as well for more 
+            information send us your message through this email 
+            <i>wilsonchiyenda42@gmail.com</i>
+        </p>
+
+        <div class="in">
+            <input class="input-boxx" type="email" placeholder="email">
+            <input class="input-boxx" type="password" placeholder="password">
+            <input class="text" type="text" placeholder="your tex....">
+            <button class="b3">submit</button>
+        </div>
+    </section>
+</body>
+</html>
